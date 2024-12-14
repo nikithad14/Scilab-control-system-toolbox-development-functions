@@ -13,6 +13,4 @@ function sys = uplus(sys)
         error("lti: uplus: this is an unary operator");
     end
 endfunction
-sys = [1,-2;3,4];
-uplus(sys)
-disp(sys)
+
