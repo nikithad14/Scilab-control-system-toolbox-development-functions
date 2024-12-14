@@ -30,3 +30,10 @@
      sys = uminus()
 ##
      lti: uminus: this is an unary operator
+## 4
+     sys1 = [1,2,3];
+     sys2 = [4,5,6];
+     sys = uminus(sys1,sys2)
+##
+     lti: uminus: this is an unary operator
+
