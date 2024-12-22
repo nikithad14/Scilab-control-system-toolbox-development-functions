@@ -7,6 +7,15 @@ Description:
       The number of arguments passed must be equal to 2.
       If the number of arguments passed is equal to 2,then the 2 systems are added.
       Else the usage is printed. 
+     ..........................
+     :      +--------+        :
+     :  +-->|  sys1  |---+    :
+  u  :  |   +--------+   | +  :  y
+ -------+                O--------->
+     :  |   +--------+   | +  :
+     :  +-->|  sys2  |---+    :
+     :      +--------+        :
+     :.........sys............:
 */
 function sys = parallel(sys1, sys2)
     if argn(2) == 2 then
