@@ -1,3 +1,13 @@
+/*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
+/*
+Calling Sequence
+      sys = times(sys1,sys2)
+Description:
+      The times function gives the Hadamard/Schur product of transfer function matrices. 
+      Also known as element-wise multiplication. 
+      It is similar to "sys1 .* sys2"
+      The number of arguments passed must be equal to 2.
+*/
 function sys = times (sys1, sys2)
   if (argn(2) ~= 2) // prevent sys = times (sys1, sys2, sys3, ...)
     error ("lti: times: this is a binary operator");
