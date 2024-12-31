@@ -1,9 +1,10 @@
 /*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
 /*
 Dependencies : eye,size
-Calling Sequence
+Calling Sequence :
       sys = uminus(sys)
-Parameters
+Parameters :
+      sys : A LTI object
       p (scalar): Number of rows in sys
       m (scaler) : Number of columns in sys
 Description:
