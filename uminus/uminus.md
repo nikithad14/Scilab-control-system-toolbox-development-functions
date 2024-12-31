@@ -2,8 +2,9 @@
 ## Calling Sequence
       sys = uminus(sys)
 ## Parameters
+      sys : LTI object
       p (scalar): Number of rows in sys
-      m (scaler) : Number of columns in sys
+      m (scalar) : Number of columns in sys
 ## Description
       The uminus function gives the unary minus of the LTI object.
       The number of arguments passed must be equal to 1.
@@ -36,4 +37,10 @@
      sys = uminus(sys1,sys2)
 ##
      lti: uminus: this is an unary operator
+## 5
+      sys = [1,2;3,4];
+      sys = uminus(sys);
+##
+      -1   -2   
+      -3   -4
 
