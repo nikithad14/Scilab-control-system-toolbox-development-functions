@@ -2,11 +2,14 @@
 ## Calling Sequence
       sys = times(sys1,sys2)
 ## Parameters
-      sys1 - LTI system
-      sys2 - LTI system
+      sys1 - LTI system or Matrix
+      sys2 - LTI system or Matrix
+      Calling Sequence:
+      sys = times(sys1,sys2)
+## Dependencies:
+      size,repmat
 ## Description
-      The times function gives the Hadamard/Schur product of transfer function matrices. 
-      Also known as element-wise multiplication. 
+      The times function gives the element-by-element multiplication product of inputs.
       It is similar to "sys1 .* sys2"
       The number of arguments passed must be equal to 2.
 # Examples
@@ -35,6 +38,12 @@
 ##
      1      2
      3      4
+## 5
+    sys1 = [1 2 3 4];
+    sys2 = [0];
+    sys = times(sys1,sys2);
+##
+     1   2   3   4
 
 
      
