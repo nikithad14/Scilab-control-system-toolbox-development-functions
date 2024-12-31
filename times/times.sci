@@ -1,10 +1,13 @@
 /*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
 /*
-Calling Sequence
+Calling Sequence:
       sys = times(sys1,sys2)
+Parameters:
+      sys1,sys2 - Matrices
+Dependencies:
+      size,repmat
 Description:
-      The times function gives the Hadamard/Schur product of transfer function matrices. 
-      Also known as element-wise multiplication. 
+      The times function gives the element-by-element multiplication product of inputs.
       It is similar to "sys1 .* sys2"
       The number of arguments passed must be equal to 2.
 */
@@ -26,10 +29,5 @@ function sys = times (sys1, sys2)
       end
   sys = sys1.*sys2;
 endfunction
-//sample testcase
-u1 = [-1 5 0];
-u2 = [1 0 -7];
-sys = times(u1,u2);
-disp(sys);
 
 
