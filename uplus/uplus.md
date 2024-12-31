@@ -1,6 +1,8 @@
 # uplus
 ## Calling Sequence
       sys = uplus(sys)
+## Parameters
+      sys - A LTI object
 ## Description
       The uplus function gives the unary plus of the LTI object.
       Eg. B = uplus(A).This operation is similar to +A.
@@ -30,4 +32,11 @@
      sys = uplus(sys1,sys2)
 ##
      lti: uplus: this is an unary operator
+## 5
+      sys = [1,2;3,4];
+      sys = uplus(sys);
+##
+      1   2   
+      3   4
+     
      
