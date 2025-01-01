@@ -23,7 +23,7 @@ function ret = end_function(sys, k, n)
         case 2
             ret = m;
         else
-            error("lti: end: invalid expression index k = %d", k);
+            error(sprintf("lti: end: invalid expression index k = %d", k));
     end
 endfunction
 
