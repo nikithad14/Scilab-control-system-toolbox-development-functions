@@ -32,18 +32,17 @@
 ##
      lti: times: this is a binary operator
 ## 4
-    sys1 = [1 2; 3 4];
-    sys2 = [1];
+    sys1 = [1 2 3 4];
+    sys2 = [];
     sys = times(sys1,sys2);
 ##
-     1      2
-     3      4
+    lti: times: system dimensions incompatible: (1x4) .* (0x0)
 ## 5
     sys1 = [1 2 3 4];
     sys2 = [0];
     sys = times(sys1,sys2);
 ##
-     1   2   3   4
+     0   0   0  0
 
 
      
