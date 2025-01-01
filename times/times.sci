@@ -23,8 +23,7 @@ function sys = times (sys1, sys2)
     elseif (p2 == 1 && m2 == 1 && p1*m1 > 1)    // sys2 SISO, sys1 non-empty
       sys2 = repmat (sys2, p1, m1);
     else
-      error ("lti: times: system dimensions incompatible: (%dx%d) .* (%dx%d)", ...
-              p1, m1, p2, m2);
+      error (sprintf("lti: times: system dimensions incompatible: (%dx%d) .* (%dx%d)", p1, m1, p2, m2));
           end
       end
   sys = sys1.*sys2;
