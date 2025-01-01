@@ -9,7 +9,7 @@ Parameters:
 Dependencies:
       size,switch
 Description:
-      The uplus function gives the end indexing for IDDATA objects. 
+      The end function gives the end indexing for IDDATA objects. 
       Used by Octave for "dat(1:end)".
 */
 function ret = end_function(sys, k, n)
