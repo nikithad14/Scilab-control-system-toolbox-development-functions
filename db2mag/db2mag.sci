@@ -10,7 +10,7 @@ Description:
 
 function mag = db2mag(db)
     if argn(2) <> 1 | ~isreal(db) then
-        error("Incorrect input. Function expects a real matrix.");
+        error("Error : Input must be a real numeric matrix.");
     end
     mag = 10 .^ (db ./ 20);
 endfunction
