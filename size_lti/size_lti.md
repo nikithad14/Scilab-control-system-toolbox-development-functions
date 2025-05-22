@@ -18,35 +18,35 @@
       - Handles errors for invalid inputs or usage.
 ## Examples
 ## 1
-sys.inname = ["u1"];
-sys.outname = ["y1"];
-res = size_lti(sys, 1);
+      sys.inname = ["u1"];
+      sys.outname = ["y1"];
+      res = size_lti(sys, 1);
 ##
-1
+      1
 ## 2
-sys.inname = ["u1"];
-sys.outname = ["y1"];
-res = size_lti(sys, 2);
+      sys.inname = ["u1"];
+      sys.outname = ["y1"];
+      res = size_lti(sys, 2);
 ##
-1
+      1
 ## 3
-sys.inname = ["u1"];
-sys.outname = ["y1"];
-res = size_lti(sys, 0);
+      sys.inname = ["u1"];
+      sys.outname = ["y1"];
+      res = size_lti(sys, 0);
 ##
-1  1
+      1  1
 
 ## 4
-sys.inname = ["u1", "u2"];
-sys.outname = ["y1"];
-size_lti(sys, 3); 
+      sys.inname = ["u1", "u2"];
+      sys.outname = ["y1"];
+      size_lti(sys, 3); 
 ##
-Invalid value for dim. Must be 0, 1, or 2.
+      Invalid value for dim. Must be 0, 1, or 2.
 
 ## 5
-sys.inname = [];
-sys.outname = ["y1", "y2"];
-[n,vargout] = size_lti(sys, 0);
+      sys.inname = [];
+      sys.outname = ["y1", "y2"];
+      [n,vargout] = size_lti(sys, 0);
 ##
-   2.
-  (1) = 0
+         2.
+        (1) = 0
