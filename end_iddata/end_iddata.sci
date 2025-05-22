@@ -3,7 +3,7 @@
 Calling Sequence:
       sys = end_iddata(dat,k,n)
 Parameters:
-      sys - A data object (Eg. a matrix.)
+      dat - A data object (Eg. a matrix.)
       k(scalar) - Index position.
       n - Indices 
 Dependencies:
