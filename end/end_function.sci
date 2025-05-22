@@ -1,7 +1,7 @@
 /*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
 /*
 Calling Sequence:
-      sys = end(sys,k,n)
+      sys = end_lti(sys,k,n)
 Parameters:
       sys - A LTI object or a matrix
       k(scalar) - Used for switch case
@@ -9,10 +9,10 @@ Parameters:
 Dependencies:
       size,switch
 Description:
-      The end function gives the end indexing for IDDATA objects. 
-      Used by Octave for "dat(1:end)".
+      End indexing for LTI objects. 
+      Used by Octave for "sys(1:end, end-1)".
 */
-function ret = end_function(sys, k, n)
+function ret = end_lti(sys, k, n)
     if n ~= 2 then
         error("lti: end: require 2 indices in the expression");
     end
