@@ -13,7 +13,7 @@ Parameters:
       e        - Descriptor matrix (n-by-n), empty or identity
       tsam     - Sampling time 
 Dependencies:
-      syslin, typeof, isempty, eye, error, disp
+      __sys_data__
 Description:
       Access descriptor state-space (DSS) model data from a given LTI system.
       - If sys is not already a DSS model, it is automatically converted.
