@@ -1,19 +1,20 @@
 /*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
 /*
-Dependencies:
-  ss2ss
-  ss2tf
+Description:
+ The mpower function returns the matrix power operation of A raised to the B (e) power. 
+ If e = 0, it returns the identity system. 
+ If e > 0, it multiplies sys by itself e times.
+ If e < 0, it computes the inverse of sys and raises it to |e|. 
+ The system must be square, and e must be a real integer.
 Calling Sequence:
   retsys = mpower(sys, e)
 Parameters:
   sys - A square object
   e   - An integer
-Description:
- The mpower function computes the power of a square LTI system sys raised to the integer exponent e. 
- If e = 0, it returns the identity system. 
- If e > 0, it multiplies sys by itself e times.
- If e < 0, it computes the inverse of sys and raises it to |e|. 
- The system must be square, and e must be a real integer.
+Dependencies:
+  ss2ss
+  ss2tf
+
  */
 function retsys = mpower(sys, e)
     if argn(2) ~= 2 then
