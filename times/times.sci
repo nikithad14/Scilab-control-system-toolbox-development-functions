@@ -1,15 +1,15 @@
 /*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
 /*
+Description:
+      The times function gives the element-by-element multiplication product of inputs.
+      It is similar to "sys1 .* sys2"
+      The number of arguments passed must be equal to 2.
 Calling Sequence:
       sys = times(sys1,sys2)
 Parameters:
       sys1,sys2 - Matrices
 Dependencies:
       size,repmat
-Description:
-      The times function gives the element-by-element multiplication product of inputs.
-      It is similar to "sys1 .* sys2"
-      The number of arguments passed must be equal to 2.
 */
 function sys = times (sys1, sys2)
   if (argn(2) ~= 2) // prevent sys = times (sys1, sys2, sys3, ...)
