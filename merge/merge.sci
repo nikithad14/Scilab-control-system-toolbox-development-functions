@@ -1,5 +1,9 @@
 /* 2024 Author: Nikitha D <dnikitha2020@gmail.com> */
 /*
+Description:
+      This function merges any number of input matrices (scalars or arrays) along the third dimension.
+      It uses Scilab’s `varargin` to accept a variable number of input arguments and concatenates them
+      using the `cat` function.
 Calling Sequence:
       dat = merge(A1, A2, ..., An)
 Parameters:
@@ -7,10 +11,6 @@ Parameters:
       dat             - Output array formed by concatenating inputs along 3rd dimension 
 Dependencies:
       varargin, cat
-Description:
-      This function merges any number of input matrices (scalars or arrays) along the third dimension.
-      It uses Scilab’s `varargin` to accept a variable number of input arguments and concatenates them
-      using the `cat` function.
 */
 
 function dat = merge(varargin)
