@@ -14,10 +14,10 @@
                :      +--------+        :
                :.........sys............:
 ## Calling Sequence
-sys = parallel(sys1,sys2)
+`sys = parallel(sys1,sys2)`
 ## Parameters
-`sys1,sys2` - A LTI object
-`sys` - Parallel combination of sys1 and sys2
+- `sys1,sys2` - A LTI object
+- `sys` - Parallel combination of sys1 and sys2
      
 # Examples
 ## 1
