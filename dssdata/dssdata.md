@@ -1,23 +1,24 @@
 # dssdata
-## Calling Sequence:
-      [a, b, c, d, e, tsam, scaled] = dssdata(sys)
-      [a, b, c, d, e, tsam, scaled] = dssdata(sys,flg)
-## Parameters:
-      sys      - Any type of LTI system (state-space, transfer function, ZPK, etc.)
-      flg      - Optional second input.Default value is 0.
-      a        - State matrix (n-by-n)
-      b        - Input matrix (n-by-m)
-      c        - Output (measurement) matrix (p-by-n)
-      d        - Feedthrough matrix (p-by-m)
-      e        - Descriptor matrix (n-by-n), empty or identity
-      tsam     - Sampling time 
-## Dependencies:
-      __sys_data__
 ## Description:
-      Access descriptor state-space (DSS) model data from a given LTI system.
-      - If sys is not already a DSS model, it is automatically converted.
-      - If called with no second argument and e is empty, returns e = eye(size(a)).
-      - Used to extract or inspect internal state-space representations of LTI systems.
+- Access descriptor state-space (DSS) model data from a given LTI system.
+- If sys is not already a DSS model, it is automatically converted.
+- If called with no second argument and e is empty, returns e = eye(size(a)).
+- Used to extract or inspect internal state-space representations of LTI systems.
+## Calling Sequence:
+- `[a, b, c, d, e, tsam, scaled] = dssdata(sys)`
+- `[a, b, c, d, e, tsam, scaled] = dssdata(sys,flg)`
+## Parameters:
+- `sys`      - Any type of LTI system (state-space, transfer function, ZPK, etc.)
+- `flg`      - Optional second input.Default value is 0.
+- `a`        - State matrix (n-by-n)
+- `b`        - Input matrix (n-by-m)
+- `c`        - Output (measurement) matrix (p-by-n)
+- `d`        - Feedthrough matrix (p-by-m)
+- `e`        - Descriptor matrix (n-by-n), empty or identity
+- `tsam`     - Sampling time 
+## Dependencies:
+`__sys_data__`
+
 ## Examples
 ## 1
     A = [0 1; -2 -3];  
