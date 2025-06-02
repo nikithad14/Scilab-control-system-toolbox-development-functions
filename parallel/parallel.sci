@@ -1,7 +1,5 @@
 /*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
 /*
-Calling Sequence
-      sys = parallel(sys1,sys2)
 Description:
       The parallel function connects two LTI models parallely.
       The number of arguments passed must be equal to 2.
@@ -16,12 +14,17 @@ Description:
      :  +-->|  sys2  |---+    :
      :      +--------+        :
      :.........sys............:
+Calling Sequence
+      sys = parallel(sys1,sys2)
+Parameters :
+sys1,sys2 - A LTI object
+sys - Parallel combination of sys1 and sys2
 */
 function sys = parallel(sys1, sys2)
     if argn(2) == 2 then
         sys = sys1 + sys2;
     else
-        error();
+        error("lti:parallel. This is a binary operator");
     end
 endfunction
 
