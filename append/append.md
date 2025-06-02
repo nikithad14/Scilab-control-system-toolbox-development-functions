@@ -1,15 +1,15 @@
 # append
 ## Description
-The append function groups LTI models by appending their inputs and outputs.
-The number of arguments passed must be greater than 0.
-The blockdiag() function creates a block diagonal matrix from the series of inputs passed.
+- The append function groups LTI models by appending their inputs and outputs.
+- The number of arguments passed must be greater than 0.
+- The blockdiag() function creates a block diagonal matrix from the series of inputs passed.
 ## Calling Sequence
 sys = append(sys1,sys2,sys3....sysN)
-## Input/Output Parameters
-sys1,sys2,...sysN - A LTI object
-sys - The resulting appended LTI object
+## Parameters
+- `sys1,sys2,...sysN` - A LTI object
+- `sys` - The resulting appended LTI object
 ## Dependencies 
-blockdiag
+`blockdiag`
 
 # Examples
 ## 1
