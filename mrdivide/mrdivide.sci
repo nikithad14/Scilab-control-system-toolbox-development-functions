@@ -1,14 +1,14 @@
 /*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
 /*
 Description:
-      The mrdivide function computes the right matrix division of sys1 and sys2
-      The function first checks that sys2 is a square matrix and that the number of columns in sys1 matches
-      the number of rows in sys2.
-      If these conditions are met, it computes the inverse of sys2 and multiplies it with sys1.
-      If sys2 is not square or if the dimensions are incompatible, it throws an error.
+      The mrdivide function computes the right matrix division of sys1 and sys2.
+      The function checks if the number of input arguments are equal to 2, else it throws an error.
+      The function calculates the inverse of sys2. Then the sizes of sys1 and sys2 are calculated.
+      If the rows of sys1 and the columns of sys2 are equal then sys1 is multiplied with sys2.
+      If the dimensions are incompatible, it throws an error.
 Calling Sequence :
       sys = mrdivide(sys1, sys2)
- Dependencies :
+Dependencies :
       pinv
 Parameters :
       sys1 : A matrix
