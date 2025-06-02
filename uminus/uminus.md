@@ -1,6 +1,7 @@
 # uminus
 ## Description
 - The uminus function gives the unary minus of the LTI object.
+- This function and - A are equivalent. 
 - The number of arguments passed must be equal to 1.
 - The function first calculates the size of the input argument and creates an identity matrix of size pxp.
 - The identity matrix is negated and then multiplied with the input.
