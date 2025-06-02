@@ -1,5 +1,10 @@
 /* 2024 Author: Nikitha D <dnikitha2020@gmail.com> */
 /*
+Description:
+      Access descriptor state-space (DSS) model data from a given LTI system.
+      - If sys is not already a DSS model, it is automatically converted.
+      - If called with no second argument and e is empty, returns e = eye(size(a)).
+      - Used to extract or inspect internal state-space representations of LTI systems.
 Calling Sequence:
       [a, b, c, d, e, tsam, scaled] = dssdata(sys)
       [a, b, c, d, e, tsam, scaled] = dssdata(sys,flg)
@@ -14,11 +19,7 @@ Parameters:
       tsam     - Sampling time 
 Dependencies:
       __sys_data__
-Description:
-      Access descriptor state-space (DSS) model data from a given LTI system.
-      - If sys is not already a DSS model, it is automatically converted.
-      - If called with no second argument and e is empty, returns e = eye(size(a)).
-      - Used to extract or inspect internal state-space representations of LTI systems.
+
 */
 
 function [a, b, c, d, e, stname, scaled] = __sys_data__(sys)
