@@ -1,5 +1,8 @@
 /*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
 /*
+Description:
+      End indexing for LTI objects. 
+      Used by Octave for "sys(1:end, end-1)".
 Calling Sequence:
       sys = end_lti(sys,k,n)
 Parameters:
@@ -8,9 +11,6 @@ Parameters:
       n - always 2
 Dependencies:
       size,switch
-Description:
-      End indexing for LTI objects. 
-      Used by Octave for "sys(1:end, end-1)".
 */
 function ret = end_lti(sys, k, n)
     if n ~= 2 then
