@@ -1,5 +1,10 @@
 /* 2024 Author: Nikitha D <dnikitha2020@gmail.com> */
 /*
+Description:
+      Returns the size of an LTI system object, similar to how size() behaves for standard data types.
+      - When called with no dim and no outputs, it prints a message.
+      - When called with one or two outputs, it returns sizes.
+      - Handles errors for invalid inputs or usage.
 Calling Sequence:
       [n, varargout] = size_lti(sys, dim)
 Parameters:
@@ -11,12 +16,8 @@ Parameters:
       n           - Output size 
       varargout   - Second output, used when dim = 0 and two outputs are expected
 Dependencies:
-      size, struct, error, mprintf
-Description:
-      Returns the size of an LTI system object, similar to how size() behaves for standard data types.
-      - When called with no dim and no outputs, it prints a message.
-      - When called with one or two outputs, it returns sizes.
-      - Handles errors for invalid inputs or usage.
+      size
+
 */
 
 function [n, varargout] = size_lti(sys, dim)
