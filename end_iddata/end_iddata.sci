@@ -1,5 +1,8 @@
 /*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
 /*
+Description:
+      The end function gives the end indexing for IDDATA objects. 
+      Used by Octave for "dat(1:end)".
 Calling Sequence:
       sys = end_iddata(dat,k,n)
 Parameters:
@@ -8,9 +11,7 @@ Parameters:
       n - Indices 
 Dependencies:
       size,switch
-Description:
-      The end function gives the end indexing for IDDATA objects. 
-      Used by Octave for "dat(1:end)".
+
 */
 function ret = end_iddata(dat, k, n)
   if n > 4 then
