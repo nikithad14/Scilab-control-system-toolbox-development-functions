@@ -16,7 +16,7 @@
 ## Calling Sequence
 `sys = parallel(sys1,sys2)`
 ## Parameters
-- `sys1,sys2` - A LTI object
+- `sys1,sys2` - A LTI object, matrices, scalars, state space models
 - `sys` - Parallel combination of sys1 and sys2
      
 # Examples
