@@ -8,11 +8,9 @@ Description:
       If the dimensions are incompatible, it throws an error.
 Calling Sequence :
       sys = mrdivide(sys1, sys2)
-Dependencies :
-      pinv
 Parameters :
-      sys1 : A matrix
-      sys2 : A matrix
+      sys1 : A matrix, Lti object or a state space model
+      sys2 : A matrix,Lti object or a state space model
   */
 
 function sys = mrdivide(sys1, sys2)
