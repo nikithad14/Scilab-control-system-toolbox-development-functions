@@ -8,10 +8,9 @@
 ## Calling Sequence :
 `sys = mldivide(sys1, sys2)`
 ## Parameters :
-- `sys1` : A  matrix
-- `sys2` : A matrix
-## Dependencies :
-pinv
+- `sys1` : A  matrix,Lti object or a state space model
+- `sys2` : A matrix,Lti object or a state sace model
+
 
 # Examples:
 ## 1
