@@ -3,13 +3,11 @@
 - End indexing for LTI objects.
 - Used by Octave for "sys(1:end, end-1)".
 ## Calling Sequence:
-sys = end_lti(sys,k,n)
+`sys = end_lti(sys,k,n)`
 ## Parameters:
-- `sys` - A LTI object or a matrix
-- `k`(scalar) - Used for switch case
-- `n` - always 2
-## Dependencies:
-size,switch
+- `sys` - A LTI object,real or complex matrix,state space model
+- `k`   - A scalar. Used for switch case
+- `n` - A scalar.The value must be always 2 
 
 ## Examples:
 ## 1
