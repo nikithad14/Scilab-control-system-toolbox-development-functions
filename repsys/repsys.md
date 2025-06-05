@@ -11,8 +11,6 @@
 - `sys` : A LTI system or a matrix
 - `m` (scalar): Number of rows to be repeated
 - `n` (scalar) : Number of columns to be repeated
-## Dependencies : 
-repmat
 
 # Examples:
 ## 1
