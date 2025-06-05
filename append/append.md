@@ -8,8 +8,6 @@ sys = append(sys1,sys2,sys3....sysN)
 ## Parameters
 - `sys1,sys2,...sysN` - A LTI object
 - `sys` - The resulting appended LTI object
-## Dependencies 
-`blockdiag`
 
 # Examples
 ## 1
