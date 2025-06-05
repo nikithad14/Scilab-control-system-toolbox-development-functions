@@ -9,7 +9,7 @@
 ## Calling Sequence
 `sys = uminus(sys)`
 ## Parameters
-- `sys` : A LTI object,real or complex matrices, state space models.
+- `sys` : A LTI object,real or complex matrices.
 - `p` (scalar): Number of rows in sys
 - `m` (scalar) : Number of columns in sys
 
