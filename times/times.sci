@@ -7,7 +7,7 @@ Description:
 Calling Sequence:
       sys = times(sys1,sys2)
 Parameters:
-      sys1,sys2 - Matrices
+      sys1,sys2 - LTI object or Matrices
 */
 function sys = times (sys1, sys2)
   if (argn(2) ~= 2) // prevent sys = times (sys1, sys2, sys3, ...)
