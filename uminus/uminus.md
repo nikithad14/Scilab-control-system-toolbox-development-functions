@@ -9,12 +9,10 @@
 ## Calling Sequence
 `sys = uminus(sys)`
 ## Parameters
-- `sys` : LTI object
+- `sys` : A LTI object,real or complex matrices, state space models.
 - `p` (scalar): Number of rows in sys
 - `m` (scalar) : Number of columns in sys
 
-## Dependencies 
-      eye,size
 # Examples
 ## 1
       sys = [1,2,3;4,5,6];
