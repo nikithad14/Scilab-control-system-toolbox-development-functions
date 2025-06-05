@@ -7,9 +7,9 @@ Description:
 Calling Sequence:
       sys = append(sys1,sys2,sys3....sysN)
 Parameters:
-      sys1,sys2,...sysN - A LTI object
-      sys - The resulting appended LTI object
-Dependencies : blockdiag
+      sys1,sys2,...sysN - A LTI object, real and complex matrix, state space models.
+      sys - The resulting appended LTI or real or complex matrix or a state space model.
+
 */
 function sys = append(varargin)
     // Check if no arguments are passed
