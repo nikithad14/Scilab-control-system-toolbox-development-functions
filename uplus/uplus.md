@@ -8,7 +8,7 @@
 ## Calling Sequence
 `sys = uplus(sys)`
 ## Parameters
-`sys` - A LTI object
+`sys` - A LTI object, real or complex matrix
 
 # Examples
 ## 1
