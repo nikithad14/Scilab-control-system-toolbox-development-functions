@@ -9,9 +9,8 @@ Description:
       The result is the unary minus of the input sys.
 Calling Sequence :
       sys = uminus(sys)
-Dependencies : eye,size
 Parameters :
-      sys : A LTI object
+      sys : A LTI object, real or complex matrices, state space models
       p (scalar): Number of rows in sys
       m (scaler) : Number of columns in sys
 
