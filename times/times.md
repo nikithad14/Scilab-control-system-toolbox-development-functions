@@ -8,8 +8,6 @@
 ## Parameters
 - `sys1` - LTI system or Matrix
 - `sys2` - LTI system or Matrix
-## Dependencies:
-size,repmat
 
 # Examples
 ## 1
