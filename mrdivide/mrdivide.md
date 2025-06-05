@@ -8,10 +8,8 @@
 ## Calling Sequence 
 `sys = mrdivide(sys1, sys2)`
 ## Parameters 
-- `sys1` : A matrix
-- `sys2` : A square matrix
-## Dependencies 
-pinv
+- `sys1` : A matrix, LTI object or a state space model
+- `sys2` : A matrix,LTI object or a state space model
 
 # Examples:
 ## 1
@@ -26,13 +24,14 @@ pinv
     sys2 = [2 4 6; 1 3 5];  
     sys = mrdivide(sys1, sys2)
 ##
-    lti: mrdivide: sys2 must be a square matrix
+    lti: mrdivide: system dimensions incompatible
 ## 3
     sys1 = [1 2; 3 4];  
     sys2 = [5 6];  
     sys = mrdivide(sys1, sys2)
 ##
-      lti: mrdivide: system dimensions incompatible
+         0.2786885
+         0.6393443
 ## 4
       sys1 = [1 2; 3 4];  
       sys2 = [];  
