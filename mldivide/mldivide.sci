@@ -9,10 +9,9 @@ If the dimensions are incompatible, it throws an error.
 Calling Sequence :
       sys = mldivide(sys1, sys2)
 Parameters :
-      sys1 : A matrix
-      sys2 : A matrix
- Dependencies :
-      pinv
+      sys1 : A matrix, LTI object, State space model
+      sys2 : A matrix, LTI object, State space model
+ 
 */
 
 function sys = mldivide(sys1, sys2)
