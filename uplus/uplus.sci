@@ -9,7 +9,7 @@ Description:
 Calling Sequence:
       sys = uplus(sys)
 Parameters:
-      sys - A LTI object
+      sys - A LTI object, real or complex matrix
 */
 function sys = uplus(sys)
     if nargin ~= 1  // prevent sys = uplus(sys1, sys2, sys3, ...)
