@@ -7,10 +7,9 @@ Calling Sequence:
       sys = end_lti(sys,k,n)
 Parameters:
       sys - A LTI object or a matrix
-      k(scalar) - Used for switch case
-      n - always 2
-Dependencies:
-      size,switch
+      k - A scalar. Used for switch case
+      n - A scalar and the value is always 2
+
 */
 function ret = end_lti(sys, k, n)
     if n ~= 2 then
