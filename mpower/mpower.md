@@ -8,11 +8,8 @@
 ## Calling Sequence
   `retsys = mpower(sys, e)`
 ## Parameters
-- `sys` - A square object
-- `e`   - An integer
-## Dependencies
-- ss2ss
-- ss2tf
+- `sys` - A square matrix, SISO or MIMO systems. But the number of rows and columns must be same.
+- `e`   - An integer, can be positive, negative or zero.
 
 # Examples
 ## 1
