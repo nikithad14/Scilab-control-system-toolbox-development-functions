@@ -8,10 +8,8 @@ Description :
     If the number of input arguments is incorrect, the function throws an error.
 Calling Sequence :
      bool = issiso(sys)
-Dependencies :
-     and, bool
 Parameters :
-    sys - A LTI object
+    sys - A LTI object, a matrix, a scalar value
 */
 
 function bool = issiso(sys)
