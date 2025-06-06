@@ -7,7 +7,7 @@
 - `bool = isminimumphase (sys)`
 - `bool = isminimumphase (sys, tol)`
 ## Parameters 
-- `sys` - LTI system.
+- `sys` - A LTI system
 - `tol` - Optional tolerance. tol must be a real-valued, non-negative scalar. Default value is 0.
 - `bool` - True if the system is minimum-phase and false otherwise.
 ## Dependencies
