@@ -8,9 +8,8 @@
 ## Calling Sequence :
 `bool = issiso(sys)`
 ## Parameters :
-`sys` - A LTI object
-## Dependencies :
-and, bool
+`sys` - A LTI object, a matrix,a scalar element.
+
 
 ## Examples :
 ## 1
