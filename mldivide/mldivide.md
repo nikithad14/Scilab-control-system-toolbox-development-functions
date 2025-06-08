@@ -48,3 +48,14 @@
       sys = mldivide(sys1, sys2) 
 ##
       lti: mldivide: system dimensions incompatible
+## 6
+```
+sys1 = [1+2*%i, 3-4*%i; 5+6*%i, 7-8*%i];
+sys2 = [2-1*%i; 4+3*%i];
+sys = mldivide(sys1, sys2)
+```
+##
+```
+   0.5 + 1.25i
+   1.  + 0.25i
+```
