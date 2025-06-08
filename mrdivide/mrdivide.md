@@ -44,4 +44,16 @@
       sys = mrdivide(sys1, sys2)   
 ##
       lti: mrdivide: system dimensions incompatible
+## 6
+```
+sys1 = [1+2*%i, 3-4*%i; 5+6*%i, 7-8*%i];
+sys2 = [2-1*%i, 4+3*%i];
+sys = mrdivide(sys1, sys2)
+
+```
+##
+```
+  -5.551D-17 - 0.6666667i
+   0.2666667 - 1.2i      
+```
 
