@@ -148,6 +148,47 @@
     
      scaled = 
         []
+## 5
+```
+A = [0 1; -2 3+4*%i];
+B = [0; 1+2*%i];
+C = [1 -1*%i];
+D = [0];
+sys = syslin(0.1, A, B, C, D);
+[a, b, c, d, e, tsam, scaled] = dssdata(sys, [])
+```
+##
+```
+a = [2x2 double]
+
+   0. + 0.i   1. + 0.i
+  -2. + 0.i   3. + 4.i
+
+ b = [2x1 double]
+
+   0. + 0.i
+   1. + 2.i
+
+ c = [1x2 double]
+
+   1. + 0.i   0. - i  
+
+ d = 
+
+   0.
+
+ e = 
+
+    []
+
+ tsam = 
+
+   0.1
+
+ scaled = 
+
+    []
+```
     
     
         
