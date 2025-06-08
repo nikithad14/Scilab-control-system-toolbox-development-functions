@@ -1,55 +1,117 @@
 # horzcat
 ## Description:
-- Returns the horizontal concatenation of N-D array objects, array1, array2, …, arrayN along dimension 2. 
-- Arrays may also be concatenated horizontally using the syntax for creating new matrices.
-- For example: A = [ array1, array2, ... ] 
-- It uses `cat(2, ...)` internally to form a single row-wise matrix.
-- All input arguments must have the same number of rows.
+- Horizontal concatenation of iddata datasets.
+- The outputs and inputs are concatenated in the following way: ‘dat.y{e} = [dat1.y{e}, dat2.y{e}, ...]’
+  ‘dat.u{e} = [dat1.u{e}, dat2.u{e}, ...]’ where E denotes the experiment.
+- The number of experiments and samples must be equal for all datasets.
 ## Calling Sequence:
-`dat = horzcat(A, B, C, ...)`
+`dat = horzcat(dat1, dat2, dat3, ...)`
 ## Parameters:
-- `A, B, C, ...`  - Matrices, vectors, or scalars to be concatenated horizontally
-- `dat`           - Output matrix after horizontal concatenation
+- `dat1, dat2, dat3 ...`  - iddata objects
+- `dat`                   - Horizontally Concatenated iddata set
 ## Dependencies:
-cat, varargin
+@iddata/cat
 
 ## Examples 
 ## 1
-    A = [1 2 3];
-    B = [4 5 6];
-    C = [7 8 9];
-    result = horzcat(A, B, C)
+```
+dat = horzcat(iddata (1, 1), iddata (2, 2))
+```
 ##
-     1.   2.   3.   4.   5.   6.   7.   8.   9.
+```
+dat = [struct] with fields:
 
+  y: (1-element list)
+      (1) = [1,2]
+  outname: (2-elements list)
+      (1) = ""
+      (2) = ""
+  outunit: (2-elements list)
+      (1) = ""
+      (2) = ""
+  u: (1-element list)
+      (1) = [1,2]
+  inname: (2-elements list)
+      (1) = ""
+      (2) = ""
+  inunit: (2-elements list)
+      (1) = ""
+      (2) = ""
+  tsam: (1-element list)
+      (1) = -1
+  timeunit = ""
+  timedomain = %t
+  w: (empty list)
+  expname: (1-element list)
+      (1) = ""
+  name = ""
+  notes: (empty list)
+  userdata = []
+  type = "iddata"
+```
 ## 2
-    A = [1; 2];
-    B = [3; 4];
-    res = horzcat(A, B)
+```
+dat = horzcat(iddata (1, 1), iddata (2, 2), iddata(3, 3))
+```
 ##
-     1.   3.
-     2.   4.
+```
+dat = [struct] with fields:
 
+  y: (1-element list)
+      (1) = [1,2,3]
+  outname: (3-elements list)
+      (1) = ""
+      (2) = ""
+      (3) = ""
+  outunit: (3-elements list)
+      (1) = ""
+      (2) = ""
+      (3) = ""
+  u: (1-element list)
+      (1) = [1,2,3]
+  inname: (3-elements list)
+      (1) = ""
+      (2) = ""
+      (3) = ""
+  inunit: (3-elements list)
+      (1) = ""
+      (2) = ""
+      (3) = ""
+  tsam: (1-element list)
+      (1) = -1
+  timeunit = ""
+  timedomain = %t
+  w: (empty list)
+  expname: (1-element list)
+      (1) = ""
+  name = ""
+  notes: (empty list)
+  userdata = []
+  type = "iddata"
+```
 ## 3
-    A = [1 2; 3 4];
-    B = [5 6; 7 8];
-    res = horzcat(A, B)
+```
+dat = horzcat(iddata (1, 1), iddata ({2, 3}, {2, 3}))
+```
 ##
-     1.   2.   5.   6.
-     3.   4.   7.   8.
-
+```
+iddata: cat: number of experiments do not match
+```
 ## 4
-    A = [9 10];
-    res = horzcat(A)
+```
+dat = horzcat(iddata (1, 1), iddata ({2, 3}, {2, 3}))
+```
 ##
-     9.   10.
-
+```
+iddata: cat: number of experiments do not match
+```
 ## 5
-    A = [1];
-    B = [5];
-    C = [8 9 10];
-    res = horzcat(A, B, C)
+```
+ horzcat()
+```
 ## 
-     1.   5.   8.   9.   10.
+```
+Invalid index.
+```
 
 
