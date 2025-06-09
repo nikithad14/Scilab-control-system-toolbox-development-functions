@@ -1,53 +1,64 @@
 # size
 ## Description:
-- Returns the size of an LTI system object, similar to how size() behaves for standard data types.
-- When called with no dim and no outputs, it prints a message.
-- When called with one or two outputs, it returns sizes.
-- Handles errors for invalid inputs or usage.
+LTI model size, i.e.  number of outputs and inputs.
 ## Calling Sequence:
 `[n, varargout] = size_lti(sys, dim)`
+ `NVEC = size (SYS)`
+ `N = size (SYS, DIM)`
+ `[P, M] = size (SYS)`
 ## Parameters:
-- `sys`         - LTI system structure with fields `inname` and `outname`
-- `dim` (opt)   - Dimension indicator (0, 1, or 2). Default is 0.
-  -  0 → return or display both input/output sizes
-  -  1 → return number of outputs
-  -   2 → return number of inputs
-- `n`           - Output size 
-- `varargout`   - Second output, used when dim = 0 and two outputs are expected
-## Dependencies:
-size
-
+- SYS - LTI system.
+-  DIM - If given a second argument, ‘size’ will return the size of the corresponding dimension.
+- NVEC - Row vector.  The first element is the number of outputs (rows) and the second element the number of inputs (columns).
+- N -  Scalar value.  The size of the dimension DIM.
+- P -  Number of outputs.
+- M -  Number of inputs.
 ## Examples
 ## 1
-      sys.inname = ["u1"];
-      sys.outname = ["y1"];
-      res = size_lti(sys, 1)
+```
+sys = syslin('c', [2 4; 6 8], [1 0; 0 1]);
+nvec = size_lti(sys)
+```
 ##
-      1
+```
+ nvec = [1x2 double]
+
+   2.   2.
+```
 ## 2
-      sys.inname = ["u1"];
-      sys.outname = ["y1"];
-      res = size_lti(sys, 2)
+```
+sys = syslin('c', 1, [3 5], 1);
+m = size_lti(sys, 5)
+```
 ##
-      1
+```
+Invalid dimension.
+```
 ## 3
-      sys.inname = ["u1"];
-      sys.outname = ["y1"];
-      res = size_lti(sys, 0)
+```
+sys = syslin('c', 8, [9 10], 1);
+[p, m] = size_lti(sys)
+```
 ##
-      1  1
-
+```
+ p = 1.
+ m = 2.
+```
 ## 4
-      sys.inname = ["u1", "u2"];
-      sys.outname = ["y1"];
-      size_lti(sys, 3)
+```
+sys = syslin('c', 5, [6 7], 1);
+m = size_lti(sys, 2)
+```
 ##
-      Invalid value for dim. Must be 0, 1, or 2.
-
+```
+ m = 2.
+```
 ## 5
-      sys.inname = [];
-      sys.outname = ["y1", "y2"];
-      [n,vargout] = size_lti(sys, 0)
+```
+sys = syslin('c', 2, [3 4], 1);
+nvec = size_lti(sys)
+```
 ##
-         2.
-        (1) = 0
+```
+1.   2.
+```
