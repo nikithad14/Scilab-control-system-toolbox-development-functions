@@ -13,7 +13,7 @@ K — an integer
 
 Dependencies
 Use iddata function to give inputs in Scilab
-[https://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci](https://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci)
+https://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
 */
 
 function retdat = diff_iddata(dat, k)
