@@ -21,7 +21,6 @@ function dat = ifft_iddata(dat)
         return;
     end
    e = size(dat.w,"c");
-    // Check: First frequency value in each dat.w(i) must be zero
     for i = 1:e
         b1 = list(dat.w);
         b2 = cell2mat(b1(1)(i));
@@ -29,8 +28,6 @@ function dat = ifft_iddata(dat)
             error("iddata: ifft: first frequency must be zero");
         end
     end
-
-    // Check: Each w(i) must be linearly spaced (second-order differences ≈ 0)
     for i = 1:e
         b1 = list(dat.w);
         b2 = cell2mat(b1(1)(i));
@@ -39,7 +36,7 @@ function dat = ifft_iddata(dat)
             error("iddata: ifft: require linearly spaced frequency vectors");
         end
     end
-    [x, a1, a2, e] = size_iddata(dat); // x = number of frequency points
+    [x, a1, a2, e] = size_iddata(dat); 
 x = matrix(x, -1, 1);
 n = x;
 nconj = x - modulo(x, 2);
@@ -48,24 +45,16 @@ for i = 1:length(dat.y)
     y = dat.y(i)(1);
     ni = n(i);
     nci = nconj(i);
-    if nci >= 2 then
-        yfull = [y; conj(y(nci:-1:2, :))];
-    else
-        yfull = y;
-    end
-    yt = real(fft(yfull, 1, 1)) * sqrt(ni + nci);
+    yi = [y; conj(y(nci:-1:2, :))];
+    yt = real(fft(yi, 1, 1)) * sqrt(ni + nci);
     dat.y(i) = list(yt);
 end
 for i = 1:length(dat.u)
     u = dat.u(i)(1);
     ni = n(i);
     nci = nconj(i);
-    if nci >= 2 then
-        ufull = [u; conj(u(nci:-1:2, :))];
-    else
-        ufull = u;
-    end
-    ut = real(fft(ufull, 1, 1)) * sqrt(ni + nci);
+    ui = [u; conj(u(nci:-1:2, :))];
+    ut = real(fft(ui, 1, 1)) * sqrt(ni + nci);
     dat.u(i) = list(ut);
 end
     dat.w = [];
