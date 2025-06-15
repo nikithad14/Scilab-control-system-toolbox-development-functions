@@ -13,7 +13,13 @@ Dependencies:
 __pole__, spec, roots
 */
 function pol = __pole__ (sys)
+    if issiso(sys) then
     pol = roots (sys.den(1));
+    else
+    warning("tf: pole: converting to minimal state-space for pole computation of mimo tf\n");
+    sys = tf2ss(sys); 
+    pol = pole(sys.A); 
+    end
 endfunction
 
 function pol = pole(sys)
