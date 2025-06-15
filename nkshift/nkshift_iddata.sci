@@ -1,13 +1,14 @@
 /*2024 Author: Nikitha D <dnikitha2020@gmail.com>*/
 /*
+Description:
+    Shift input channels of dataset dat according to integer nk. A positive value of nk means that the input channels are delayed nk samples. By default, both input and output signals are shortened by nk samples.
 Calling Sequence:
     datout = nkshift (dat, nk)
 Parameters:
     datout (Structure): Shifted iddata set.
     dat (Structure): iddata set to be shifted.
     nk (Real scalar): Amount the iddata set is to be shifted.
-Description:
-    Shift input channels of dataset dat according to integer nk. A positive value of nk means that the input channels are delayed nk samples. By default, both input and output signals are shortened by nk samples.
+
 */
 function dat = nkshift(dat, nk)
     if argn(2) > 2 then
