@@ -19,7 +19,7 @@ function dat = nkshift(dat, nk)
         nk = 0;
     end
 
-    if type(nk) <> 1 | size(nk, "*") <> 1 then
+    if ~(isreal(nk) & isscalar(nk)) then
         error("iddata: nkshift: ""nk"" must be a scalar integer");
     end
     snk = sign(nk);
