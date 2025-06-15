@@ -1,10 +1,9 @@
 # @iddata/nkshift
+## Description
+Shift input channels of dataset dat according to integer nk. A positive value of nk means that the input channels are delayed nk samples. By default, both input and output signals are shortened by nk samples.
 
 ## Calling Sequence
 - `datout = nkshift (dat, nk)`
-
-## Description
-Shift input channels of dataset dat according to integer nk. A positive value of nk means that the input channels are delayed nk samples. By default, both input and output signals are shortened by nk samples.
 
 ## Parameters
 - `datout` (Structure): Shifted iddata set.
