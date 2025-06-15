@@ -10,7 +10,7 @@ Parameters:
 `SYS` - LTI model.
 `P` -  Poles of SYS.
 Dependencies:
-__pole__, spec, roots
+__pole__, issiso https://github.com/nikithad14/Scilab-control-system-toolbox-development-functions/blob/main/issiso/issiso.sci
 */
 function pol = __pole__ (sys)
     if issiso(sys) then
