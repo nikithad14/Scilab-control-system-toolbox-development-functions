@@ -10,7 +10,7 @@
 - `SYS` - LTI model.
 - `P` -  Poles of SYS.
 ## Dependencies
-___pole___, issiso
+___pole___, issiso https://github.com/nikithad14/Scilab-control-system-toolbox-development-functions/blob/main/issiso/issiso.sci
 ## Examples
 ## 1
 ```
