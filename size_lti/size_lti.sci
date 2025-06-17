@@ -1,63 +1,56 @@
 /* 2024 Author: Nikitha D <dnikitha2020@gmail.com> */
 /*
 Description:
-      Returns the size of an LTI system object, similar to how size() behaves for standard data types.
-      - When called with no dim and no outputs, it prints a message.
-      - When called with one or two outputs, it returns sizes.
-      - Handles errors for invalid inputs or usage.
+    LTI model size, i.e.  number of outputs and inputs.
 Calling Sequence:
-      [n, varargout] = size_lti(sys, dim)
+    [n, varargout] = size_lti(sys, dim)
 Parameters:
-      sys         - LTI system structure with fields `inname` and `outname`
-      dim (opt)   - Dimension indicator (0, 1, or 2). Default is 0.
-                    0 → return or display both input/output sizes
-                    1 → return number of outputs
-                    2 → return number of inputs
-      n           - Output size 
-      varargout   - Second output, used when dim = 0 and two outputs are expected
-Dependencies:
-      size
-
+    SYS - LTI system.
+    DIM - If given a second argument, ‘size’ will return the size of the corresponding dimension.
+    NVEC - Row vector.  The first element is the number of outputs (rows) and the second element the number of inputs (columns).
+    N -  Scalar value.  The size of the dimension DIM.
+    P -  Number of outputs.
+    M -  Number of inputs.
 */
-
 function [n, varargout] = size_lti(sys, dim)
-    if argn(2) < 2 then
-        dim = 0;
-    end
-    if argn(2) > 2 then
-        error("Too many input arguments.");
-    end
-    p = size(sys.outname, 2);  
-    m = size(sys.inname, 2);   
-    select dim
+  if argn(2) < 2 then
+    dim = 0;
+  end
+   if argn(2) > 2 then
+    error("Too many input arguments.");
+  end
+  if typeof(sys) <> "state-space" & typeof(sys) <> "rational" then
+    error("Input must be an LTI system.");
+  end
+  [p, m] = size(sys);
+
+  select dim
+    case 0 then
+      select argn(1)
         case 0 then
-            select argn(1)
-                case 0 then
-                    if p == 1 then
-                        stry = "";
-                    else
-                        stry = "s";
-                    end
-                    if m == 1 then
-                        stru = "";
-                    else
-                        stru = "s";
-                    end
-                    mprintf("LTI model with %d output%s and %d input%s.\n", p, stry, m, stru);
-                case 1 then
-                    n = [p, m];
-                case 2 then
-                    n = p;
-                    varargout(1) = list(m);
-                else
-                    error("Invalid number of output arguments.");
-            end
+          stry = ""; stru = "";
+          if p <> 1 then 
+              stry = "s";
+          end
+          if m <> 1 then
+               stru = "s"; 
+          end
+          disp(msprintf("LTI model with %d output%s and %d input%s.", p, stry, m, stru));
         case 1 then
-            n = p;
+          n = [p, m];
         case 2 then
-            n = m;
+          n = p;
+          varargout(1) = m;
         else
-            error("Invalid value for dim. Must be 0, 1, or 2.");
-    end
+          error("Too many output arguments.");
+      end
+    case 1 then
+      n = p;
+    case 2 then
+      n = m;
+    else
+      error("Invalid dimension.dim must be 0,1 or 2");
+  end
+
 endfunction
 
