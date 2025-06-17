@@ -12,7 +12,7 @@ Shift input channels of dataset dat according to integer nk. A positive value of
 
 ## Dependencies
  - iddata - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
- - Run iddata function in Scilab while giving the output.
+ - Run iddata function in Scilab while giving the testcase.
 
 ## Examples
 1.
