@@ -10,6 +10,10 @@ Shift input channels of dataset dat according to integer nk. A positive value of
 - `dat` (Structure): iddata set to be shifted.
 - `nk` (Real scalar): Amount the iddata set is to be shifted.
 
+## Dependencies
+ - iddata - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
+ - Run iddata function in Scilab while giving the output.
+
 ## Examples
 1.
 ```
