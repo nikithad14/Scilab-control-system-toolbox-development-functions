@@ -8,6 +8,9 @@ Parameters:
     datout (Structure): Shifted iddata set.
     dat (Structure): iddata set to be shifted.
     nk (Real scalar): Amount the iddata set is to be shifted.
+Dependencies
+ - iddata - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
+ - Run iddata function in Scilab while giving the output.
 
 */
 function dat = nkshift(dat, nk)
