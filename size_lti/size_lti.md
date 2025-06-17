@@ -32,7 +32,7 @@ m = size_lti(sys, 5)
 ```
 ##
 ```
-Invalid dimension.
+Invalid dimension.dim must be 0,1 or 2
 ```
 ## 3
 ```
