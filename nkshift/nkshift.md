@@ -188,13 +188,77 @@ dat = [struct] with fields:
   userdata = []
   type = "iddata"
 ```
-7
+7.
 ```
 dat = iddata((1:6)', (1:6)');
 dat = nkshift_iddata(dat, [1 2])
 ```
 ```
 iddata: nkshift: "nk" must be a scalar integer
+```
+8.
+```
+dat = iddata([0; -1; 5; -3; 2; 4], [10; 0; -10; 20; -20; 0]);
+dat = nkshift_iddata(dat, 2)
+```
+```
+dat = [struct] with fields:
+
+  y: (1-element list)
+      (1) = [5;-3;2;4]
+  outname: (1-element list)
+      (1) = ""
+  outunit: (1-element list)
+      (1) = ""
+  u: (1-element list)
+      (1) = [10;0;-10;20]
+  inname: (1-element list)
+      (1) = ""
+  inunit: (1-element list)
+      (1) = ""
+  tsam: (1-element list)
+      (1) = -1
+  timeunit = ""
+  timedomain = %t
+  w: (empty list)
+  expname: (1-element list)
+      (1) = ""
+  name = ""
+  notes: (empty list)
+  userdata = []
+  type = "iddata"
+```
+9.
+```
+dat = iddata([0; -1; 5; -3; 2; 4], [10; 0; -10; 20; -20; 0]);
+dat = nkshift_iddata(dat, -3)
+```
+```
+ dat = [struct] with fields:
+
+  y: (1-element list)
+      (1) = [0;-1;5]
+  outname: (1-element list)
+      (1) = ""
+  outunit: (1-element list)
+      (1) = ""
+  u: (1-element list)
+      (1) = [20;-20;0]
+  inname: (1-element list)
+      (1) = ""
+  inunit: (1-element list)
+      (1) = ""
+  tsam: (1-element list)
+      (1) = -1
+  timeunit = ""
+  timedomain = %t
+  w: (empty list)
+  expname: (1-element list)
+      (1) = ""
+  name = ""
+  notes: (empty list)
+  userdata = []
+  type = "iddata"
 ```
 
 
