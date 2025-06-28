@@ -13,7 +13,7 @@ Dependencies
    Run iddata function in Scilab while giving the testcase.
 
 */
-function dat = nkshift(dat, nk)
+function dat = nkshift_iddata(dat, nk)
     if argn(2) > 2 then
         error("nkshift: too many input arguments");
     end
