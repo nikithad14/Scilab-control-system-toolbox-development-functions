@@ -11,11 +11,13 @@
 ## Dependencies
 Use iddata function to give inputs in Scilab
 https://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
+##
+Use struct(x) to view the outputs in Octave
 ## Examples
 ## 1
 ```
 dat = iddata((1:6)',(1:6)');
-diff_iddata(dat,0)
+x = diff_iddata(dat,0)
 ```
 ##
 ```
@@ -50,7 +52,7 @@ diff_iddata(dat,0)
 ## 2
 ```
 dat = iddata((1:6)',(1:6)');
-diff_iddata(dat,1)
+x = diff_iddata(dat,1)
 ```
 ##
  ``` 
@@ -85,7 +87,7 @@ diff_iddata(dat,1)
 ## 3
 ```
 dat = iddata((1:6)',(1:6)');
- diff_iddata(dat,2)
+ x = diff_iddata(dat,2)
  ```
 ##
 ```
@@ -120,7 +122,7 @@ dat = iddata((1:6)',(1:6)');
 ## 4
 ```
 dat = iddata((1:6)',(1:6)');
-diff_iddata(dat,1,1)
+x = diff_iddata(dat,1,1)
 ```
 ##
 ```
@@ -129,7 +131,7 @@ Wrong number of input arguments.
 ## 5
 ```
 dat = iddata((1:2:10)',(1:2:10)');
-diff_iddata(dat)
+x = diff_iddata(dat)
 ```
 ##
 ```
