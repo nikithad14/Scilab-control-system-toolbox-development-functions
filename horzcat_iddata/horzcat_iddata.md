@@ -10,8 +10,8 @@
 - `dat1, dat2, dat3 ...`  - iddata objects
 - `dat`                   - Horizontally Concatenated iddata set
 ## Dependencies:
-@iddata/cat - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/%40iddata%20cat/cat.sci
-Use iddata function to provide inputs - http://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
+- @iddata/cat - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/%40iddata%20cat/cat.sci
+- Use iddata function to provide inputs - http://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
 
 In Octave, After the function call, use struct(dat) to view the output.
 ## Examples 
