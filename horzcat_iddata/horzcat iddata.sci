@@ -22,17 +22,15 @@ function dat = cat_iddata(dim, varargin)
     tmp = varargin;
     n_args = length(tmp);
 
-    // Extract number of experiments per iddata object
     e = list();
     for i = 1:n_args
         e($+1) = length(tmp(i).y);
     end
 
-    // Check timedomain consistency
     check_domain(tmp);
 
     select dim
-    case 1 then // Vertical concatenation
+    case 1 then 
         check_experiments(e);
         [p, m] = get_output_input_sizes(tmp);
         check_outputs(tmp, p);
@@ -54,7 +52,7 @@ function dat = cat_iddata(dim, varargin)
         dat.inunit = tmp(1).inunit;
         dat.timedomain = tmp(1).timedomain;
 
-    case 2 then // Horizontal concatenation
+    case 2 then 
         check_experiments(e);
         check_samples(tmp);
         [p, m] = get_output_input_sizes(tmp);
@@ -84,7 +82,7 @@ function dat = cat_iddata(dim, varargin)
         dat.inunit = inunit;
         dat.timedomain = tmp(1).timedomain;
 
-    case 3 then // Merge experiments
+    case 3 then 
         [p, m] = get_output_input_sizes(tmp);
         check_outputs(tmp, p);
         check_inputs(tmp, m);
