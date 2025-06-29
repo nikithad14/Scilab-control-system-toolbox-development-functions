@@ -88,7 +88,10 @@ m = 1
 sys = [1 2 3; 4 5 6];
 size_lti(sys)
 ```
-- The given input is not an LTI system.Hence this code produces an error in Scilab.But in Octave, size(sys) will produce a result.Because Octave's size works for LTI, iddata, matrix inputs.
+- The given input is not an LTI system.
+- Hence this code produces an error in Scilab.
+- But in Octave, size(sys) will produce a result.
+- Because Octave's size works for LTI, iddata, matrix inputs.
 ```
 Input must be an LTI system.
 ```
