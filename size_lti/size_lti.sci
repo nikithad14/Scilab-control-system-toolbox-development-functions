@@ -3,9 +3,9 @@
 Description:
     LTI model size, i.e.  number of outputs and inputs.
 Calling Sequence:
-    NVEC = size_lti(SYS)
-    N = size_lti(SYS, DIM)
-    [P, M] = size_lti(SYS)
+    NVEC = size(SYS)
+    N = size(SYS, DIM)
+    [P, M] = size(SYS)
 Parameters:
     SYS - LTI system.
     DIM - If given a second argument, ‘size’ will return the size of the corresponding dimension.
