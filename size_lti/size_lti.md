@@ -2,13 +2,12 @@
 ## Description:
 LTI model size, i.e.  number of outputs and inputs.
 ## Calling Sequence:
-`[n, varargout] = size_lti(sys, dim)`
  `NVEC = size (SYS)`
  `N = size (SYS, DIM)`
  `[P, M] = size (SYS)`
 ## Parameters:
 - SYS - LTI system.
--  DIM - If given a second argument, ‘size’ will return the size of the corresponding dimension.
+- DIM - If given a second argument, ‘size’ will return the size of the corresponding dimension.
 - NVEC - Row vector.  The first element is the number of outputs (rows) and the second element the number of inputs (columns).
 - N -  Scalar value.  The size of the dimension DIM.
 - P -  Number of outputs.
@@ -61,4 +60,35 @@ nvec = size_lti(sys)
 ##
 ```
 1.   2.
+```
+## 6
+```
+A = [0 1; -2 -3];
+B = [%i; 1 - %i];
+C = [2 + %i, -%i];
+D = [0];
+sys = syslin('c', A, B, C, D);
+m = size_lti(sys, 2)
+```
+```
+ m = 1.
+```
+## 7
+```
+sys = syslin('c', %i, %i, %i, %i);
+[p, m] = size_lti(sys)
+```
+```
+p = 1
+m = 1
+```
+
+## 8
+```
+sys = [1 2 3; 4 5 6];
+size_lti(sys)
+```
+- The given input is not an LTI system.Hence this code produces an error in Scilab.But in Octave, size(sys) will produce a result.Because Octave's size works for LTI, iddata, matrix inputs.
+```
+Input must be an LTI system.
 ```
