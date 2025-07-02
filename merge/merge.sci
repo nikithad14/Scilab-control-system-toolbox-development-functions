@@ -1,22 +1,23 @@
 /* 2024 Author: Nikitha D <dnikitha2020@gmail.com> */
 /*
 Description:
-      This function merges any number of input matrices (scalars or arrays) along the third dimension.
-      It uses Scilab’s `varargin` to accept a variable number of input arguments and concatenates them
-      using the `cat` function.
+       Concatenate experiments of iddata datasets.
+      The experiments are concatenated in the following way: dat.y = [dat1.y; dat2.y; ...] dat.u = [dat1.u; dat2.u; ...]
+      The number of outputs and inputs must be equal for all datasets.
 Calling Sequence:
-      dat = merge(A1, A2, ..., An)
+      DAT = merge(DAT1, DAT2, ...)
 Parameters:
-      A1, A2, ..., An - Input matrices or scalars to be merged along the 3rd dimension
-      dat             - Output array formed by concatenating inputs along 3rd dimension 
+      DAT1, DAT2, ... - iddata datasets.
 Dependencies:
-      varargin, cat
+      @iddata/cat - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/%40iddata%20cat/cat.sci
+      Use iddata function to provide inputs - http://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
+      Use struct(dat) to view the output in Octave
 */
 
-function dat = merge(varargin)
+function dat = merge_iddata(varargin)
     dat = varargin(1);  
     for i = 2:length(varargin)
-        dat = cat(3, dat, varargin(i));
+        dat = cat_iddata(3, dat, varargin(i));
     end
 endfunction
 
