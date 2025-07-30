@@ -9,7 +9,9 @@
 
 ## Dependencies:
 - @iddata/cat - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/%40iddata%20cat/cat.sci
-- Use iddata function to provide inputs - http://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
+- iddata - http://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
+- Use iddata function to provide inputs
+- @iddata/size - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/%40iddata%20size/size.sci
 - Use struct(dat) to view the output in Octave
 ## Examples
 ## 1
