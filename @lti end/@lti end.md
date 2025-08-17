@@ -29,7 +29,7 @@
      lti: end: invalid expression index k = 3
 ## 4
      sys = [42];
-     ret = end_lti(sys, 2, 1);
+     ret = end_lti(sys, 2, 2);
      sys(ret,1)
 ##
     42
