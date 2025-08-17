@@ -27,6 +27,8 @@
      ret = end_lti(sys, 3, 2)
 ##
      lti: end: invalid expression index k = 3
+
+The value of k must be 1 or 2 (1 means rows and 2 means columns). This testcase cannot be checked in Octave, because Octave treats end as keyword.
 ## 4
      sys = [42];
      ret = end_lti(sys, 2, 2);
