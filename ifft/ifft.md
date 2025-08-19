@@ -22,9 +22,9 @@ dat.w = w_data;
 dat.timedomain = %f;
 x = ifft_iddata(dat);
 x.y(1)(1)
-x.y(1)(2)
+x.y(2)(1)
 x.u(1)(1)
-x.u(1)(2)
+x.u(2)(1)
 
 ```
 ##
@@ -183,7 +183,7 @@ dat.w = w_data;
 dat.timedomain = %f;
 x = ifft_iddata(dat);
 x.y(1)(1)
-u.y(1)(1)
+x.u(1)(1)
 ```
 ##
 ```
