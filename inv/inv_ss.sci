@@ -9,6 +9,8 @@ SYS — System to be inverted. A state space model with A, B, C, D.
 SYSI — Inverted system of SYS.
 Dependencies:
 `__sys_inverse__`
+Scilab's syslin does not take 5 inputs (i.e) A,B,C,D,E as input.
+Scilab's does not have inname, outname, ingroup, outgroup features.
 */
 function sys = __sys_inverse__(sys)
     a = sys.a;
@@ -41,4 +43,5 @@ function retsys = inv_ss(sys)
     end
     retsys = __sys_inverse__(sys);
 endfunction
+
 
