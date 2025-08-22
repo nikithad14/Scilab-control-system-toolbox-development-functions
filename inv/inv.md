@@ -89,3 +89,21 @@ inv_ss(sys);
 ```
 lti: inv: system must be square
 ```
+## 6
+```
+A = [0 1*%i; -2*%i -3*%i];
+B = [0; 1*%i];
+C = [1*%i , 0];
+D = [2*%i];
+sys = syslin("c",A,B,C,D);
+inv_ss(sys)
+```
+##
+```
+  A (matrix) = [0,%i;-%i*2.5,-%i*3]
+  B (matrix) = [0;0.5]
+  C (matrix) = [-0.5,0]
+  D (matrix) = -%i*0.5
+  X0 (initial state) = [0;0]
+  dt (time domain) = "c"
+```
