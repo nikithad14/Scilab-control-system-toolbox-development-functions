@@ -13,7 +13,7 @@ Use iddata function to give inputs in Scilab
 https://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
 ## Note
 - Use struct(x) to view the outputs in Octave
-- This function uses built-in diff function. The diff function in 2024 Scilab Version accepts 0 as a second argument. In 2025 Scilab versions, the second argument must be a non zero positive integer.Hence the first testcase will produce an error in Scilab 2025 version.
+- This function uses built-in diff function. The diff function in 2024.1.0 and 2023.1.0 Scilab Version accepts 0 as a second argument. In 2025.1.0 Scilab versions, the second argument must be a non zero positive integer.Hence the first testcase will produce an error in Scilab 2025.1.0 version.
 ## Examples
 ## 1
 ```
