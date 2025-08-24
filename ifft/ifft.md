@@ -28,6 +28,20 @@ x.u(2)(1)
 
 ```
 ##
+OCTAVE TEST CASE FORMAT :
+```
+y_data = {[ones(10,1)*3, (10:19)'],[ones(10,1)*7, (20:-1:11)']};
+u_data = {[ones(10,1)*40, (50:59)'],[ones(10,1)*-60, (-70:-1:-79)']};
+w_data = {[(0:9)'],[(0:9)']};
+dat = iddata(y_data,u_data);
+dat.w = w_data;
+x = ifft_iddata(dat);
+x.y(1)(1)
+x.y(2)(1)
+x.u(1)(1)
+x.u(2)(1)
+```
+##
 ```
 -> x.y(1)(1)
 
@@ -128,7 +142,7 @@ x.u(2)(1)
 ```
 ## 2
 ```
-DAT2 = iddata({[(5:14).', (2:3:29).'], [(15:-1:6).', (30:-3:12).']},{[(51:60).', (56:65).'], [(71:80).', (-80:-1:-89).']});
+DAT2 = iddata({[(5:14).', (2:3:29).'], [(15:-1:6).', (30:-2:12).']},{[(51:60).', (56:65).'], [(71:80).', (-80:-1:-89).']});
 ifft_iddata(DAT2)
 
 This example is called without specifing the timedomain as %f, it returns the same DAT2 as output.
