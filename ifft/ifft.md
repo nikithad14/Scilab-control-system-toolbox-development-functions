@@ -7,8 +7,8 @@ Transform iddata objects from frequency to time domain.
 - Input : `DAT` - iddata set containing signals in frequency domain.The frequency values must be distributed equally from 0 to the Nyquist frequency.  The Nyquist frequency is only included for even signal lengths.
 - Outputs : `DAT` - iddata identification dataset in time domain.  In order to preserve signal power and noise level, the FFTs are normalized by multiplying each transform by the square root of the signal length.
 ## Dependencies 
-@iddata/size - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/%40iddata%20size/size.sci
-Use iddata function to provide inputs - http://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci 
+- @iddata/size - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/%40iddata%20size/size.sci
+- Use iddata function to provide inputs - http://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci 
 ##
 No need to secify dat.timedomain = %f in Octave.
 ## Examples
@@ -26,20 +26,6 @@ x.y(2)(1)
 x.u(1)(1)
 x.u(2)(1)
 
-```
-##
-OCTAVE TEST CASE FORMAT :
-```
-y_data = {[ones(10,1)*3, (10:19)'],[ones(10,1)*7, (20:-1:11)']};
-u_data = {[ones(10,1)*40, (50:59)'],[ones(10,1)*-60, (-70:-1:-79)']};
-w_data = {[(0:9)'],[(0:9)']};
-dat = iddata(y_data,u_data);
-dat.w = w_data;
-x = ifft_iddata(dat);
-x.y(1)(1)
-x.y(2)(1)
-x.u(1)(1)
-x.u(2)(1)
 ```
 ##
 ```
