@@ -10,7 +10,8 @@ DAT — iddata set containing signals in frequency domain. The frequency values 
 Outputs:
 DAT — iddata identification dataset in time domain. In order to preserve signal power and noise level, the FFTs are normalized by multiplying each transform by the square root of the signal length.
 Dependencies
-@iddata/size
+- @iddata/size - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/%40iddata%20size/size.sci
+- iddata - https://github.com/akash-sankar/CSToolboxFunctions/blob/main/iddata/iddata.sci
 */
 function dat = ifft_iddata(dat)
     if argn(2) ~= 1 then
@@ -41,12 +42,15 @@ x = matrix(x, -1, 1);
 n = x;
 nconj = x - modulo(x, 2);
 
+threshold = 1e-14;
+
 for i = 1:length(dat.y)
     y = dat.y(i)(1);
     ni = n(i);
     nci = nconj(i);
     yi = [y; conj(y(nci:-1:2, :))];
     yt = real(fft(yi, 1, 1)) * sqrt(ni + nci);
+    yt(abs(yt) < threshold) = 0;
     dat.y(i) = list(yt);
 end
 for i = 1:length(dat.u)
@@ -55,6 +59,7 @@ for i = 1:length(dat.u)
     nci = nconj(i);
     ui = [u; conj(u(nci:-1:2, :))];
     ut = real(fft(ui, 1, 1)) * sqrt(ni + nci);
+    ut(abs(ut) < threshold) = 0;
     dat.u(i) = list(ut);
 end
     dat.w = [];
